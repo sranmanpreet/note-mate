@@ -1,0 +1,18 @@
+<div class="main-container">
+    <div class="search-bar-container">
+        <div class="field">
+            <p class="control has-icons-left">
+                <input class="input" type="text" placeholder="Search notes" [(ngModel)]="searchText">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-search"></i>
+                </span>
+            </p>
+        </div>
+    </div>
+    <div class="notes-list">
+        <app-note-card *ngFor="let note of notes; index as i" [routerLink]="i" [noteId]="i" [title]="note.title" [body]="note.body"></app-note-card>
+    </div>
+    <div class="add-note-button-container">
+        <button class="button is-success" [routerLink]="['/new']">+ Add</button>
+    </div>
+</div>
