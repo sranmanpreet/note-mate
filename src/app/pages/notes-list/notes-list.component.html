@@ -2,7 +2,7 @@
     <div class="search-bar-container">
         <div class="field">
             <p class="control has-icons-left">
-                <input class="input" type="text" placeholder="Search notes" [(ngModel)]="searchText">
+                <input class="input" type="text" placeholder="Search notes" (keyup)="filter($event.target.value)">
                 <span class="icon is-small is-left">
                     <i class="fas fa-search"></i>
                 </span>
@@ -10,9 +10,7 @@
         </div>
     </div>
     <div class="notes-list">
-        <app-note-card *ngFor="let note of notes; index as i" [routerLink]="i" [noteId]="i" [title]="note.title" [body]="note.body"></app-note-card>
+        <app-note-card *ngFor="let note of filteredNotes; index as i" [routerLink]="i" [noteId]="i" [title]="note.title" [body]="note.body"></app-note-card>
     </div>
-    <div class="add-note-button-container">
-        <button class="button is-success" [routerLink]="['/new']">+ Add</button>
-    </div>
+    <button class="button is-success" [routerLink]="['/new']">+ Add</button>
 </div>
