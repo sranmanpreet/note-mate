@@ -26,6 +26,7 @@
         }
     }
     .delete-button {
+        display: none;
         z-index: 2;
         position: absolute;
         top: 10px;
@@ -37,6 +38,11 @@
         }
         &:active {
             color: darken($color: $pink, $amount: 10%)
+        }
+    }
+    &:hover {
+        .delete-button {
+            display: block;
         }
     }
 }
