@@ -8,10 +8,10 @@ import { CookieService } from 'ngx-cookie-service';
 export class NoteService {
 
   private notes: Note[] = [
-        { title : "Buy Cookies (default)", body: "Buy Tiger for Sartaj, OREO for Joe"},
-        { title : "Buy Sandles (default)", body: "Buy Sandles for Sartaj"},
-        { title : "Complete NoteMate (default)", body: "Complete NoteApp development by Thursday"},
-        { title : "Buy Vegetables (default)", body: "Buy Vegies"}
+        { title : "Example Note (default)", body: "This note is an example note."},
+        { title : "Getting the band back together (default)", body: ""},
+        { title : "Buy Umbrella (default)", body: ""},
+        { title : "Groceries (default)", body: "Tea, Sugar, Cookies, Toothpaste"}
   ];
 
   constructor(private cookieService: CookieService) {
